@@ -5,8 +5,9 @@
 }
 
 .box{
+    box-sizing: border-box;
     width: 100%;
-    text-align: center;
+    text-align: left;
     border: solid #ffffff 2px;
-    padding: 5px;
+    padding: 16px 8px;
 }
