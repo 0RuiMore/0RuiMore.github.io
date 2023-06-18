@@ -1,14 +1,77 @@
 *{
     /*font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
-    background-color: #4D5364;;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    /*字体&背景*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #4D5364;
+    
 }
 
 .box{
+    /*暂时用不上*/
     font-size: 125%;
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    border: solid #ffffff 2px;
+    border: solid #79839c 2px;
     padding: 16px 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*盒*/
+.flipbox{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+
+.card{
+    /*大小&背景颜色*/
+    width: 100%;
+    height: 100%;
+    background: #4D5364;
+
+    /*3D模式*/
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /*动画播放时间*/
+    transition: transform .5s ease-in-out;
+
+    /*边框*/
+    border: solid #424755 2px;
+    padding: 16px 8px;
+
+    /*阴影*/
+    box-shadow: 1px 5px 13px 2px rgba(0, 0, 0, 3);
+    color: #ffffff;
+
+
+}
+
+/*前*/
+.front{
+    transform: rotateX(0deg);
+    background:url("./img/RuiMore.jpg")no-repeat;
+    background-size: 100% 100%;
+    background-color: #4D5364;
+}
+/*后*/
+.back{
+    transform: rotateX(180deg);
+
+}
+/*响应*/
+.flipbox:hover .front{
+    transform: rotateX(-180deg);
+}
+.flipbox:hover .back{
+    transform: rotateX(0deg);
 }
