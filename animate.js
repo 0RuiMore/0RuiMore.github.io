@@ -19,7 +19,7 @@ class CreatePattern {
         const randomColor =
             this.options.palette[Math.floor(Math.random() * this.options.palette.length)]//随机颜色
 
-        //每次调用一次保证得到不同的值
+        //函数每次调用一次保证得到不同的值
         const randomTranslateValue = () =>
             (Math.random() < 0.5 ? -1 : 1) *
             (this.options.distanceMin +
